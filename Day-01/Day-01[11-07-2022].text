@@ -1,0 +1,123 @@
+Day-01[11-07-2022]:
+===================
+	Good Morning To All....
+
+
+	Python Version Check:
+	=====================
+	> cmd
+	> python -V
+
+	Python Downloads:
+	=================
+	> open googlechrome and search for python.org
+	> place cursor on downloads then it will displays operating systems
+	> select your operating system
+	> It will displays 2 columns
+		>> stable release
+			-> Builtin code
+		>> pre release
+			-> For development
+	> search the version of python by using cntrl + f shortcut in browser
+	> After selecting it will displays the extension of files with bits and need to download only .executeables for windows
+	> If you are using 64 bit you need to click on "windows x86-64 executeable installer
+	> If you are using 32 bit you need to click on "windows x86 executeable installer"
+	> After selecting try to clik on the bit to download the software
+
+	Python Installation:
+	====================
+	> After downloading the python software try to double tap on it for installation
+	> It will displays a dialogue to choose either to install or not
+	> After choosing then it will displays 2 options and 2 choices for further steps
+		>> Options:
+			=> Install now : In this the default path will be displayed where the python software is to be install
+			=> Custom installation : This option is for user defined location where particular drive or folder is to be selected for installation
+		>> Choices:
+			=> Install for all users : This checkbox is for all users has to be used or not?
+			=> Add python3.xx for path : This will sets the path for environment variables where python can be linked for command prompt while python is to be accessed
+	> Then click on "install now" for further steps to install python
+	> After clicking install then it will displays a dialogue to select the option whether to install or not?
+	> Finally it will displays finish button to close the installation process.
+
+	PIP:
+	====
+		- To install third party packages we can use pip command
+
+	Pip Check:
+	===========
+	> cmd
+	> pip -V
+
+	Pip errors:
+	===========
+	> If pip is not displaying any version then we need to know the python version that is to be installed in your system
+	> Then download the python version that is previously installed or if the python software is already existing in your system
+	> Double tap on the software then it will displays some options such as
+		> modify
+		> repair
+		> uninstall
+	> Try to select modify option to reallocate the features of a python
+	> After selecting the modify option it will displays the features to be selected except the "downloads" you need to select all checkboxes for proper python and pip access
+	> Then click on install 
+	> Finally it will installs and displays a close button for closing the installation process
+	> Then open command prompt if it is open try to close the previous command prompt
+	> Open command propmt and check the pip version such as "pip -V"
+
+	Pip Upgrade:
+	============
+	> cmd
+	> python -m pip install --upgrade pip
+	> It will uninstall previous pip and installs present pip version to your system
+
+	Installation of Django:
+	=======================
+	> cmd
+	> pip install django==3.xx
+		- User defined versions
+	> pip install django
+		- It will installs updated django version
+
+	Django Check:
+	=============
+	> cmd
+	> django-admin --version
+	> It will displays the django installation if not then try to install by using "pip install django==3.xx" command
+
+	Project Creation:
+	=================
+	> Create a folder in your system anywhere and open the fodler in explorer
+	> Click on the path and try to type "cmd" and press enter to open the present path in command prompt
+	> Type the command for creating project
+		>> django-admin startproject "projectname"
+		Ex:
+			django-admin startproject GISTProject
+	> After creating then enter into path where manage.py file exists
+	> In that path it will displays one folder and one file
+		>> projectfoldername [Admin App]
+		>> manage.py [Server file]
+
+	Project Execution:
+	==================
+	> cmd
+	> Try to run the server by using the command as
+		>> manage.py runserver
+	> If it is displaying an error to run server then try to follow this command
+		>> python manage.py runserver
+	> Open browser and type the url that is dipslayed in the server such as
+		"http://127.0.0.1:8000"
+			or
+		"localhost:8000"
+	> In this we can use any to display the data
+	> In project folder you can observer another file is created while server is running at first time the created file is "db.sqlite3"
+
+	Task:
+	======
+	packages and modules
+	class,object,inheritance,constructor
+	Data structures [list,tuples,set,dictionary and string]
+	function and its types
+	function arguement types
+	
+
+
+
