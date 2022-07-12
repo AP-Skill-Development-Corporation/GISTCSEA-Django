@@ -1,0 +1,25 @@
+Task:
+=====
+	> Problem Statement:
+	====================
+		** Task-1:
+		==========
+		>>Input: 1245
+		>>Output:
+			Entered number is: 1245
+			Left Half Reverse is: 2145
+			Right Half Reverse is: 1254
+
+		** Task-2:
+		==========
+		>>Input: 12745
+		>>Output:
+			Entered number is: 12745
+			Left Half Reverse is: 21745
+			Right Half Reverse is: 12754
+
+	Note:
+	=====
+		Try to do dynamic programming
+		dont use string,slicing concepts in this problem statement
+		Try to implement your own logic but the output should be in above format only

@@ -1,0 +1,74 @@
+Day-02[12-07-2022]:
+===================
+	Good Mornign to All...
+
+	Installation of Sublime Tool:
+	=============================
+	> Open GoogleChrome and search it for "sublime"
+	> Click on the first link then it navigates to download page
+	> Click on Download button to download the software
+
+	Installation of Db Browser:
+	===========================
+	> Open GoogleChrome and search it for "db browser"
+	> Click on the first link for further process
+	> In the site you can observe "Download" click on it
+	> Then try to select the bit of your operating system
+	> Click on "Standarad Installer for 64 bit" for 64 bit and vice-versa for other operating bits
+	> Click on the installer to download the software
+
+
+	Project Files [AdminApp] Overview:
+	==================================
+	> asgi => Asynchronous Gateway Interface   
+	> settings => All Configurations can be done here
+	> wsgi => Web Socket Gateway Interface
+	> urls => For Checking of url we can access it
+	> init => This file is to be considered as a python file
+
+
+	Port Number Blocks:
+	===================
+	> cmd
+	> python manage.py runserver
+			or
+	> manage.py runserver
+	> If the port number is blocked then we need to pass the port number in running of a server
+		>> python manage.py runserver "portnumber"
+					or
+		>> manage.py runserver "portnumber"
+	> In browser we need to access the present port number to access the site
+		>> localhost:1234 or 127.0.0.1:1234
+		>> 127.0.0.1 => localhost
+
+
+	App Creation:
+	=============
+	> cmd
+	> manage.py startapp "appname"
+	ex:	manage.py startapp GISTApp
+	> python manage.py startapp "appname"
+	ex: python manage.py startapp GISTApp
+
+
+	UserApp Files Overview:
+	======================
+	> init => This file is to be considered as a python file
+	> admin => user tables can be viewwed by importing in admin.py
+	> views => [urls.py and views.py] are main controllers. urlname is checked in urls.py and Logic will be coded in views.py
+	> apps => App Configuration to run an app
+	> test => validation can be tested here like unit and blackbox testing
+	> models => Database
+
+	Dynamic Url Mapping:
+	====================
+	> In path we can pass 3 parameter they are
+		>> urlname
+		>> function where we are accessing from
+		>> name to be used in hyperlinks for which url it should be performed
+	> Syntax:
+		>>> path('urlname',modulename.functionname,name="userdefined name"),
+	> In path for urlname we can pass n number of values for that we need to mention data type and variablename that is to be accessed in views while creating a function
+		>> path('urlname/<datatype:variable_name>/...',modulename.functionname,name="userdefined name"),
+
+	
