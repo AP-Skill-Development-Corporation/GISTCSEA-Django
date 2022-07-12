@@ -8,7 +8,7 @@ Django for second years CSEA
     - Django installation, Project creation and running of it
 
 ## Day-02(12-07-2022):
-    - Proejct creation files overview
+    - Project creation files overview
     - App Creation files overview
     - Configuration to run userapp
     - Dynamic Url Mapping
