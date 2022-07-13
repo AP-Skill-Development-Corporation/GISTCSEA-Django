@@ -1,0 +1,55 @@
+Day-03[13-7-2022]:
+==================
+	Good Morning to All..
+
+	url => views => httpresponse(string)
+	url => views => httpresponse(string with html tag)
+	url => views => httpresponse(string with html and inline styling)
+	url => views => httpresponse(string with html and internal styling)
+	url => views => httpresponse(string with javascript)
+	url => views => httpresponse(string with html page)
+	url => views => httpresponse(string with html page and inline styling)
+	url => views => httpresponse(string with html page and internal styling)
+
+	render:
+	=======
+	> In this it consists of 3 parameter values they are
+		>> selfparameter
+		>> path of .html file
+		>> dictionary
+	> Syntax:
+		>>> render(selfparameter,'path of .html file',dictionary)
+		>>> render(k,'..\demo.html',{'key':value})
+
+	Templates folder creation:
+	==========================
+	> Templates folder can be created in app
+	> In templates folder only .html files should be saved
+	> Ways to access .html files
+		> Inside of another folder in templates we are saving .html files
+			Syntax:
+				ex: templates/sample
+				sample is user defined folder name inside of sample folder we are saving .html files
+					render(selfparameter,'path of .html file')
+					render(k,'sample/s.html')
+
+		> Inside of templates folder without another folder
+			Syntax:
+				ex: templates
+				Here we are not creating any fodler so we ca access only the file name
+					render(k,'v.html')
+
+	url => views => html page
+	url => views => html page with n number of values in it
+	url => views => html page with inline styling
+	url => views => html page with internal styling
+
+
+	DTL [Django Template Language]:
+	===============================
+	> DTL is used to display the values to a user in html page by accessing the values from views
+	> From views we are sending the data to a html files so in html page we cant access the data directly we need to access the values by using DTL Language
+	> Variable:
+		{{variablename}}
+
+	
