@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="{% url 'hm' %}">ASGM</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'hm' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'ab' %}">Aboutus</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contactus</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'gd' %}">Grid System</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'rg' %}">Authenticate</a>
+      </li>
+    </ul>
+  </div>  
+</nav>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md col-sm bg-primary m-2 p-2 border rounded text-warning text-center">
+      <h3>First</h3>
+    </div>
+    <div class="col-md col-sm bg-success m-2 p-2 border rounded text-light">
+      <h3>Second</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md bg-warning m-2 p-2 border rounded">
+      <h3>Third</h3>
+    </div>
+    <div class="col-md bg-dark m-2 p-2 border rounded text-light">
+      <h3>Four</h3>
+    </div>
+    <div class="col-md bg-info m-2 p-2 border rounded">
+      <h3>Five</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md">
+      <div class="row h-100 text-center">
+        <div class="col-md bg-info m-2 p-2 h-100">
+          <h3>six</h3>
+        </div>
+        <div class="col-md bg-danger m-2 p-2">
+          <h3>seven</h3>
+        </div>
+        <div class="col-md bg-dark m-2 p-2 text-light">
+          <h3>eight</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="row bg-primary m-2 p-2">
+        <h3>Nine</h3>
+      </div>
+      <div class="row bg-success m-2 p-2">
+        <h3>Ten</h3>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+

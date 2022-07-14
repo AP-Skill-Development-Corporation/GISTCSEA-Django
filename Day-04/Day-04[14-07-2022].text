@@ -1,0 +1,110 @@
+Day-04[14-07-2022]:
+===================
+	Good Morning to All...
+
+	url => views => templates => views => templates
+
+	Navigate to another page:
+	=========================
+	> here we need to use url names to navigate while button is clicked so we need to pass the third parameter name in path function
+	> ex:
+		path("urlname",modulename.functionname,name="nametolink"),
+	> The name should be used in href of a anchor tag so we can access it as
+		<a href="{% url 'urlnametolink' %}">Back</a>
+	> We need to use DTL for reference in url for which name url function we need to redirect
+
+	Form Methods:
+	=============
+	> GET
+	> POST
+		GET:
+		====
+		> By default the form method is get
+		> While submitting the form it displays the sensitive information in browser url
+		> It stores less amount of data to submit to a file
+
+		POST:
+		=====
+		> Secure Form submission is POST because it doesnt display the sensitive information to a user
+		> In this we need to use "{% csrf_token %}" to send the data from html file to server i.e., views
+		> It stores large amount of data that cant be viewed in the url of a browser
+
+	Form Configuration:
+	===================
+	> If we need to send the data from form we need to use the method such as either "get" or "post"
+	> In form for every input we need to use names to access or to submit the values from the names to a server
+	> After submitting the form then we need to access the from dat to server for that we need to check the method first either it is "get" or "post"
+	> In views we need to store the form data to a local variable by accessing the vale from a post method from a form such as
+		ex:
+			def functionname(re):
+				if re.method == "POST":
+					d = re.POST['n']
+					render(re,'../.html',{'key':value})
+				return render(re,'../.html')
+	> To access the data from views we need to send the data in dictonary format to a .html file
+	> To access the data in .html we need to access by using DTL Language such as "{{keyname}}"
+
+	Bootstrap 4:
+	============
+	> To create responsive webpages
+	> To reduce human work for designing the .html file
+	> We can use one or more selector properties by using the class
+	> It has 2 modes to access 
+		> Online => need internet
+		> Offline => we need to download the zip file and to place it in static folder inside of css and vice-versa
+
+	Bootstrap Components:
+	=====================
+	> container => Provides space for left and right of web page
+	> container-fluid => It doesnt provide any space it fills entire width of html
+	> jumbotron => IT displays the data but background color will be in grey color
+	> grid system => To align the columns and to resize for all type of devices
+
+	Grid system:
+	============
+	> It consists of 12 columns
+	> Columns can be divided based on user specified columns
+	> Based on resolution of devices it has categorised in to 5 Devices reponsiveness they are:
+		>> xm => very small
+		>> sm => small
+		>> md => medium
+		>> lg => large
+		>> xl => extra large
+	> It consiste of columns and rows
+
+	Points:
+	=======
+	> Based on the pixels here bootstrap has assignined for each and every pixels so they categorised in to points they are from "1" to "5"
+	> for each and every point the pixels are changed based on user specification we need to use the points
+	> It can be accessed for any alignments
+
+	Margins:
+	========
+	> m => for all directions
+	> ml => margin left
+	> mr => margin right
+	> mt => margin top
+	> mb => margin bottom
+	> mx => margins for x axis [i.e., left and right]
+	> my => margins for y axis [i.e., top and bottom]
+
+	Paddings:
+	=========
+	> p => for all directions
+	> pl => padding left
+	> pr => padding right
+	> pt => padding top
+	> pb => padding bottom
+	> px => padding for x axis [i.e., left and right]
+	> py => padding for y axis [i.e., top and bottom]
+
+	Styling used in today class:
+	============================
+	> text-center
+	> bg-primary
+	> text-light
+	> border rounded
+	> shadow-lg
+	> btn btn-outline-primary
+	> col-sm
+	> card
