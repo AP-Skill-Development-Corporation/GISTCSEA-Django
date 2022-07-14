@@ -18,3 +18,9 @@ Django for second years CSEA
     - Dynamic url values to html page{templates}
     - Interface between a controller and templates
     - Styling for temporary view by using inspect element in a browser
+
+## Day-04(14-07-2022):
+    - Storing the temporary styles to a css file by using the static file handling concepts
+    - Interfaces between controller to templates and templates to views and views to another templates
+    - Bootstrap 4 Online procedure and desinged home,about,grid.html files and authentication forms like registration
+    - Grid system,margins,button,shadow,borders and padding overview by using bootstrap
