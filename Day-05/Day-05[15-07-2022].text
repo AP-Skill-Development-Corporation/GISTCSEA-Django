@@ -1,0 +1,138 @@
+Day-05[15-07-2022]:
+===================
+	Good Morning to All...
+
+	Database:
+	=========
+	> To store the data temporarily for further actions like
+		>> Create
+		>> Read
+		>> Update
+		>> Delete
+
+	ORM [Object Relational Mapper]:
+	===============================
+	> Try these ORM Queries in shell it is a service in manage.py file
+	> First we need to create a class to create a table such as
+		>> class Classname(models.Model):
+			fieldname = models.datatype(attributes)
+	> Here in ORM we are using the different fields such as
+		>> CharField => text
+		>> DateField => date
+		>> FloatField => float values
+		>> TimeField => time
+		>> FileField => files
+		>> ImageField => images
+		So we can assign the data type based on the field names
+	> After completing the class name in models.py then we need to create an interfacing files to create a table
+	> To create an interfacing file then we need to type some commands in command prompt for first interfacing file we can observe the file name such as "0001_initial.py" and other file name based on alter of the data type or a fieldname in a class
+	> For creating an interfacing file we need to type the command such as
+		>> manage.py makemigrations
+	> After creating the interfacing file we need to update all those tavle or field by using the "migrate" command
+		>> manage.py migrate
+		Here all the migrations had done and our table also created with the name such as
+			>> "appname_classname"
+			In database we can observe the table in this format
+	> Finally the database with our own table has been created
+
+	ORM Queries:
+	============
+	> open command prompt where manage.py file exists
+	> Then we need to start the shell by using the command as
+		>> manage.py shell
+	> Here we need to import the classname to shell so the command is
+		>> from appname.models import classname
+	> Then the classname is imported if not then you are accessing the wrong package or module
+
+	Display fields:
+	===============
+	> In shell try to type command to dispaly fieldname which are created in class
+		>> classname.__doc__
+			or
+		>> classname._meta.get_fields()
+	> This two commands will displays the fields and its data types that are created for that class or table
+
+	Inserting a Record [Create]:
+	============================
+	> To insert a record we need to follow the procedures they are
+		>> save
+		>> create
+		>> bulk_create
+	> So the syntax to insert a record is
+		>> objectname = classname(fieldname=value,......)
+		>> objectname.save()
+		In save method we need to use save() for saving the record if not it will not insert into a database
+	> Create method doesnt require save method the syntax for create is
+		>> objectname = classname.objects.create(fieldname=value,.....)
+		So after executing this command it will insert record into a database
+	> Bulk create is used to insert single or more records by using the syntax such as
+		>> objectname = classname.objects.bulk_create([classname(fieldname=value,....),classname(fieldname=value,..),...])
+		Here the n number of records will save it in database so here also we didnt need any save method
+
+	Accesing a record[Reading]:
+	===========================
+	> To display a record we can use in different ways such as by accessing the single record or n number of records
+		>> get
+		>> filter
+		>> first
+		>> last
+		>> all
+	> get:
+		In get we need to access unique values if the record is not in a database it will displays as error
+		ex:
+			objectname = classname.objects.get(fieldname=value)
+	> filter:
+		In filter we can access duplicate values if the record is not in a database it returns empty
+		ex:
+			objectname = classname.objects.filter(fieldname=value)
+	> first:
+		In first it displays the first record of a database
+		ex:
+			objectname = classname.objects.first()
+	> last:
+		In last it displays the last record of a database
+		ex:
+			objectname = classname.objects.last()
+	> all:
+		It displays all data
+		ex:
+			objectname = classname.objects.all()
+	> slicing:
+		It can displays the data from and to
+		ex:
+			objectname = classname.objects.all()[start:stop]
+	> displaying particular field value
+		>> objectname = classname.objects.all()
+		>> objectname.fieldname
+	> Displaying n number of records by using loop
+		ex:
+			for iterationvariablename in objectname:
+				print(iterationvariablename.fieldname)
+
+	Update:
+	=======
+	> To update a record we need to use the command for that we need gto access the record by using get method
+		ex:
+		  objectname = classname.objects.get(fieldname=value)
+		  objectname.fieldname = value
+
+	Delete:
+	=======
+	> To Delete a record we need to use the command
+		ex:
+		  => Single record delete
+		  objectname = classname.objects.get(fieldname=value)
+		  objectname.delete()
+
+		  => Multiple records
+		  objectname = classname.objects.filter(fieldname=value)
+		  objectname.delete()
+
+		  => All data deletion in a table
+		  objectname = classname.objects.all()
+		  objectname.delete()
+
+		  => To delete record in a single row
+		  objectname = classname.objects.all().delete()
+
+	
