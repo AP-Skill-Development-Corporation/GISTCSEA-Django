@@ -33,6 +33,6 @@ Django for second years CSEA
 
 ## Day-06(16-07-2022):
     - Template blocks
-    - Offline Bootstrap 4, CRUD operations by using form concept
+    - Offline Bootstrap 4, CRUD operations by using form concept, Messages Concept
     - Superuser Creation, User Registration and User Authentication
     - Roles of user, Login and Logout
