@@ -24,3 +24,15 @@ Django for second years CSEA
     - Interfaces between controller to templates and templates to views and views to another templates
     - Bootstrap 4 Online procedure and desinged home,about,grid.html files and authentication forms like registration
     - Grid system,margins,button,shadow,borders and padding overview by using bootstrap
+
+## Day-05(15-07-2022):
+    - ORM Overview
+    - ORM Queries in shell
+    - CRUD Operations by using ORM
+    - Create,read and update actions in Database by using form submissions
+
+## Day-06(16-07-2022):
+    - Template blocks
+    - Offline Bootstrap 4, CRUD operations by using form concept
+    - Superuser Creation, User Registration and User Authentication
+    - Roles of user, Login and Logout
