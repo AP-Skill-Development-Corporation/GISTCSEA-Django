@@ -1,0 +1,118 @@
+Day-06[16-07-2022]:
+===================
+	Good Morning to All...
+
+	Template Blocks:
+	================
+		{% extends 'html file location' %} => for links
+		{% include 'html file location' %} => for navbar
+
+		{% block content %}
+		{% endblock %}
+	> Include is used in main file to access navbar for each file so we are not changing any navbar options
+	> Extends is used to change the file body for each html
+	> block content is used to access the data so we need to use these block tags to access the content in each file
+
+	Static File Handling:
+	=====================
+	> Static file are external css,images,js or jquery so to access all those we need to configure in settings.py file such as
+		>> STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")] => 3.0
+		>> STATICFILES_DIRS = BASE_DIR / "static" => 3.1 or latest
+	> To access css,js or images we need to load static first in main file
+		>> {% load static %} then we need to use in css and js or jquery access
+		>> <link href="{% static 'foldername/filename.extension' %}" rel="stylesheet">
+		>> <script src="{% static 'foldername/filename.extension' %}"></script>
+
+	User Registration:
+	==================
+	> Existing Model and Form access while executing the command it creates a default model such as
+		>> manage.py migrate
+	> First we need to create forms.py in user app then we need to import the existing form class and need to create user class to access the model fields in form
+
+		forms.py
+		--------
+		from django.contrib.auth.forms import UserCreationForm
+		from django.contrib.auth.models import User
+
+		class Usreg(UserCreationForm):
+			class Meta:
+				model = User
+				fields ="__all__"
+	> In forms.py we are creating our class name to access the model fields to create a user. In fields all defines all fieldnames in user table
+	> We need to access this form class in views.py for that we need to import form class such as
+		from .forms import Usreg
+	> After importing we need to access in an object such as
+		>> a = Usreg() and then we need to send this object in form of dictionary key to a .html file. To display the forms fields we need to iterate all fields by using loop
+			{% for i in key %}
+				{{i}}
+			{% endfor %}
+		>> While displaying the form fields we can iterate or else we can use dtl language in paragraph,unorderedlist or table formats
+		>>> key.as_value
+		>>> key.as_ul
+		>>> key.as_table
+	> It will displays all the table fields in form by using forms concept and we can restrict the fields also by mentioning the fieldnames in the format of list or tuple
+
+	Widgets:
+	========
+	> After Creating the form fields we cant access the styles for those we need to use widget concept fpr each field
+	> To access the bootstrap styles we need to use some inputs such as
+		>> TextInput => Text
+		>> DateInput => Date
+		>> EmailInput => Email
+		>> PasswordInput => Password
+	> We can access the styling for all fields in single key such as
+		widgets = {
+		"username":forms.TextInput(attrs={
+			"class":"form-control",
+			"placeholder":"Username",
+		}),
+		..
+		..
+		..
+		} 
+		As usually we can implement for all the fields in a form
+
+	> While inserting a record in views we dont need to import the model name becuase we had already imported in the forms class to insert the record value such as in views the code is
+		if self.method == "POST":
+			m=Usreg(request.POST)
+			if m.is_valid():
+				m.save()
+				return redirect('/')
+		m=Usreg()
+		return render(self,'.html',{'key':value})
+
+	Login and Logout:
+	=================
+	> After registration we are logging into the site for that we need to use authenticate here we are using the class oriented concept to login and logout
+	> In urls.py we need to code and in views we are not using any logic because we are accessing existing form for login
+		from django.contrib.auth import views as ad
+		path('urlname/'.ad.LoginView.as_view(template_name="html file"),name="nametoaccess"),
+	> After login we need to redirect for authenticated page so we need to configure in settings.py file such as
+		>> LOGIN_URL ="loginurlname"
+		>> LOGIN_REDIRECT_URL = "Redirectpage"
+	> Same as login we need to add path and we are not redirecting to any logout url and logout redirect urls because it automatically logout by using the logout url clicks
+	> If we need to check whether the user is loggedin on not we need to check by using the template language in navbar such as
+		{% if not user.is_authenticated %}
+			// Not authenticated Links
+		{% else %}
+			// Authenticated Links
+		{% endif %}
+
+	Messages Concept:
+	=================
+	> In Django we can alert for each and every messages such as with color combinations like success,info,warning,debug and error
+	> To display messages in an html we need to import and code in views.py such as
+		from django.contrib import messages
+
+		messages.success(self,"message information")
+	> After sending the message from view to html we need to display messages either the message is occured for that particular html or not 
+		{% if messages %}
+			{% for i in messages %}
+				<div class="alert alert-{{i.tags}}" ..>
+				{{i}}
+				</div>
+			{% endfor %}
+		{% endif %}  
+	> If any messages with one or more then we need to display all those while using loop in messages to display the color we need to use the tag and to get an information we need to use the message information
+
+	

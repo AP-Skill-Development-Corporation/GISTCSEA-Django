@@ -1,0 +1,42 @@
+body {
+	background-color: lightblue;
+}
+
+h3 
+{
+	margin-left: 30%;
+    margin-right: 30%;
+    background-color: blue;
+    text-align: center;
+    color: aliceblue;
+    padding: 5px;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+form
+{
+	margin-left: 30%;
+    margin-right: 30%;
+    padding: 8px;
+    border: 1px solid indianred;
+    background-color: darkseagreen;
+    height: 32vh;
+    border-radius: 15px;
+}
+
+button
+{
+	float:right;
+	padding:5px;
+	background-color: green;
+	color:white;
+	border:1px solid blue;
+	border-radius: 5px;
+}
+
+label,input,select
+{
+	margin-top:5px;
+	margin-bottom:1px;
+	padding: 5px;
+}

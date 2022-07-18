@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}">
+</head>
+<body>
+	<h3>Student Registration</h3>
+	<form method="post">
+		{% csrf_token %}
+		<label>Username: </label>
+		<input type="text" name="usg"><br/>
+		<label>Age: </label>
+		<input type="number" name="a"><br/>
+		<label>Year</label>
+		<select name="y">
+			<option value="0">Select Your Year</option>
+			<option value="1st Year">1</option>
+			<option value="2nd Year">2</option>
+			<option value="3rd Year">3</option>
+			<option value="4th Year">4</option>
+		</select><br/>
+		<button type="submit">register</button>
+	</form>
+</body>
+</html>
